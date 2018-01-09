@@ -1,0 +1,2 @@
+- Object orientation is still programming but it puts the focus on the item being built instead of the workers doing the work.
+- 
