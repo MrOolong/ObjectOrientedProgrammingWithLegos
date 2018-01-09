@@ -10,26 +10,51 @@ namespace Bulldozer
     {
         static void Main(string[] args)
         {
-            var dozer = new BullDozer("yellow", "Mini");
+            var man = new Man();
+            var kart = new Kart();
+            var alien = new Alien();
 
-            var dozer2 = new BullDozer("red", "Large");
-           
-            Console.WriteLine("Bulldozer 1 is " + dozer.color);
-            Console.WriteLine("Bulldozer 2 is " + dozer2.color);
 
         }
     }
 
-    public class BullDozer
+    public class GeneralObject
     {
-        // directly below is the constructor
-        public BullDozer(string _color, string _size)
+        public GeneralObject()
         {
-            this.color = _color;
-            this.size = _size;
         }
 
+        public bool moves { get; set; }
         public string color { get; set; }
-        public string size { get; set; }
+    }
+
+    public class Man : GeneralObject
+    {
+       public Man ()
+        {
+
+        }
+
+        public string name { get; set; }
+    }
+
+    public class Kart : GeneralObject
+    {
+        public Kart ()
+        {
+
+        }
+
+        public string manufacturer { get; set; }
+    }
+
+    public class Alien : GeneralObject
+    {
+        public Alien()
+        {
+
+        }
+
+        public string planet { get; set; }
     }
 }
